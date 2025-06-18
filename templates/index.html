@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Classifier</title>
+</head>
+<body>
+    <h1>Spam Email Classifier</h1>
+    <form id="emailForm">
+        <label for="email">Enter Email Text:</label><br><br>
+        <textarea id="email" name="email" rows="10" cols="50"></textarea><br><br>
+        <button type="button" onclick="classifyEmail()">Classify</button>
+    </form>
+    <h2>Classification Result:</h2>
+    <p id="result">No result yet.</p>
+
+    <script>
+        function classifyEmail() {
+            const emailText = document.getElementById("email").value;
+            fetch('/classify', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({email: emailText}),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("result").innerText = data.result;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

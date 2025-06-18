@@ -1,0 +1,18 @@
+Subject: Meeting reminder: Team sync-up tomorrow at 10:00 AM
+
+Hi Team,
+
+Just a quick reminder about our scheduled sync-up meeting tomorrow at 10:00 AM. We'll be reviewing the progress on the current sprint and discussing next steps for the upcoming release.
+
+Here’s the agenda:  
+1. Sprint progress update  
+2. Addressing blockers  
+3. Planning for the next sprint  
+
+Please make sure to have your updates ready. The meeting will be held in the conference room (or via Zoom for remote attendees).  
+
+Let me know if you have any additional topics to include.
+
+Best regards,  
+John Doe  
+Project Manager  
